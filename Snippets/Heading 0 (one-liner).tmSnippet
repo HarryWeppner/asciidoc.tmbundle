@@ -4,7 +4,7 @@
 <dict>
 	<key>content</key>
 	<string>= $1 =
-${2:Author Name} &lt;${3:mail@address.com}&gt;
+$TM_AUTHOR &lt;$TM_EMAIL&gt;
 v1.0, `date`
 
 $0</string>
