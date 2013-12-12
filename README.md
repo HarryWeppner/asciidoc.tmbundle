@@ -42,7 +42,7 @@ To install via Git:
 
 Also be sure to have asciidoc itself and maybe LaTeX around.
 
-Source can be viewed or forked via [GitHub](http://github.com/zuckschwerdt/asciidoc.tmbundle/tree/master).
+Source can be viewed or forked via [GitHub](https://github.com/HarryWeppner/asciidoc.tmbundle/tree/master).
 
 Author
 ------
