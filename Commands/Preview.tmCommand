@@ -5,7 +5,8 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>if [[ -z $TM_FILENAME ]]
+	<string>source ~/.profile
+if [[ -z $TM_FILENAME ]]
   then doc="-"
   else doc="$TM_FILEPATH"
 fi
