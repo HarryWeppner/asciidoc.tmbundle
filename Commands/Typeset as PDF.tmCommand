@@ -11,15 +11,22 @@
 . "${TM_SUPPORT_PATH}/lib/webpreview.sh"
 
 # Prepare output window.
-html_header 'Typeset &amp;amp; View' "$TM_FILENAME (PDF)"
-echo "Typesetting...&lt;/ br&gt;"
+curdir=$(dirname ${TM_FILEPATH})
+filename=$(basename "${TM_FILEPATH}")
+extension="${filename##*.}"
+filename="${filename%.*}"
+
+html_header 'Typeset &amp;amp; View' "${filename}.pdf (PDF)"
+echo "Typosetting...&lt;/ br&gt;"
 
 # Compile - suppress revision history and cover page
-a2x -f pdf --dblatex-opts "-P latex.output.revhistory=0 -P doc.layout=mainmatter -P doc.publisher.show=0" "$TM_FILEPATH"
+a2x -f pdf --asciidoc-opts="-a docinfo2" --dblatex-opts " -P latex.output.revhistory=0 -P doc.publisher.show=0" "$TM_FILEPATH"
 RC=$?
 html_footer
 test "$RC" = "0" || exit 1
-open "${TM_FILEPATH%.*}.pdf"</string>
+mkdir -p "${curdir}/pdfs"
+mv "${curdir}/${filename}.pdf" "${curdir}/pdfs"
+open "${curdir}/pdfs/${filename}.pdf"</string>
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>
