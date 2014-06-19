@@ -6,7 +6,7 @@
 	<string>
 ${TM_CURRENT_LINE/./=/g}
 $TM_AUTHOR &lt;$TM_EMAIL&gt;
-v1.0, `date`
+v1.0, `date +%F`: Initial draft
 
 </string>
 	<key>keyEquivalent</key>
