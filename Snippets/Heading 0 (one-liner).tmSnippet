@@ -7,6 +7,8 @@
 $TM_AUTHOR &lt;$TM_EMAIL&gt;
 v1.0, `date +%F`: Initial draft
 
+:imagesdir: ./`basename $TM_DIRECTORY`/resources/imgs
+
 $0</string>
 	<key>name</key>
 	<string>Heading 0 (one-liner)</string>
